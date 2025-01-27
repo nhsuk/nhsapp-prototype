@@ -4,6 +4,8 @@
 
 {% set pageHeading = "Home" %}
 
+{% set topSection = true %}
+
 {% block content %}
 
   <div class="nhsuk-grid-row">
@@ -18,10 +20,7 @@
 
       <!-- SECTION - SERVICES -->
       {{ nhsappSectionHeading({
-        headingText: "Services",
-        linkText: "View all",
-        linkUrl: "/pages/services-p9",
-        linkAriaLabel: "View all services"
+        headingText: "Services"
       }) }}
 
       {{ nhsappCardGroup({
@@ -40,10 +39,7 @@
 
       <!-- SECTION - YOUR HEALTH -->
       {{ nhsappSectionHeading({
-        headingText: "Your health",
-        linkText: "View all",
-        linkUrl: "/pages/your-health-p9",
-        linkAriaLabel: "View all your health"
+        headingText: "Your health"
       }) }}
 
       {{ nhsappCardGroup({

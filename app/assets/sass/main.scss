@@ -73,11 +73,14 @@
 
 // TOP NAV
 .app-global-navigation-native--transparent {
-  background-color: transparent;
+  background-color: $color_nhsuk-grey-5;
 
   &.scrolled {
     background-color: $color_nhsuk-grey-5;
-    transition: background-color 200ms linear;
+    transition: box-shadow 200ms linear;
+    -webkit-box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.2);
+    -moz-box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.2);
+    box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.2);
   }
 }
 
@@ -98,13 +101,13 @@ $border-radius: 8px;
   }
 
   .nhsapp-card__container {
-    border-color: #d2e1ef;
+    border-color: rgba($color_nhsuk-blue, .2);
     margin: 0 0 0 24px;
-    padding: 24px 24px 24px 0;
+    padding: 20px 24px 20px 0;
 
     @include mq($until: tablet) {
       margin: 0 0 0 20px;
-      padding: 20px 20px 20px 0;
+      padding: 16px 20px 16px 0;
     }
   }
 
