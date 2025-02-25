@@ -13,17 +13,20 @@
 
   <div class="ios-body">
     <div class="ios-wallpaper"></div>
-    <div class="ios-status-bar">
-      <div class="ios-status-left">
-        <span>5G</span>
-      </div>
-      <div class="ios-status-right">
-        <span>82%</span>
-        <div class="ios-battery-icon">
-          <div class="ios-battery-level"></div>
+    
+    {% if data['web'] === "yes" %}
+      <div class="ios-status-bar">
+        <div class="ios-status-left">
+          <span>5G</span>
+        </div>
+        <div class="ios-status-right">
+          <span>82%</span>
+          <div class="ios-battery-icon">
+            <div class="ios-battery-level"></div>
+          </div>
         </div>
       </div>
-    </div>
+    {% endif %}
     
     <div class="ios-time" id="time">10:09</div>
     <div class="ios-date" id="date">Tuesday, February 25</div>
