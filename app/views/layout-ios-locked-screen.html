@@ -2,6 +2,17 @@
 
 {% set bodyClasses = "nhs-app-native app-body-colour--transparent" %}
 
+{% block customStyles %}
+  <style>
+    body {
+      background-color: transparent !important;
+      background-image: url('/images/ios-wallpaper.png');
+      background-size: cover;
+      background-position: center;
+    }
+  </style>
+{% endblock %}
+
 <!-- HEADER -->
 {% block header %}
 {% endblock %}
