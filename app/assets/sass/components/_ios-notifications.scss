@@ -19,15 +19,15 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url('/images/ios-wallpaper.png');
+  background-image: url('/images/ios-wallpaper.jpg');
   background-size: cover;
-  background-position: center;
+  background-position: top;
   z-index: 1;
 }
 
 .ios-time {
   position: absolute;
-  top: 90px;
+  top: 70px;
   left: 0;
   width: 100%;
   color: #fff;
@@ -40,7 +40,7 @@
 
 .ios-date {
   position: absolute;
-  top: 190px;
+  top: 180px;
   left: 0;
   width: 100%;
   color: #fff;
@@ -70,7 +70,9 @@
   gap: 16px;
   text-decoration: none;
 
-  &:visited {
+  &:visited,
+  &:hover,
+  &:active {
     color: #000;
   }
 
