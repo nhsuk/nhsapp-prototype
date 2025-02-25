@@ -1,0 +1,76 @@
+{% extends 'layout-app.html' %}
+
+{% set mainClasses = "nhsuk-main-wrapper" %}
+
+<!-- HEADER -->
+{% block header %}
+{% endblock %}
+
+{% block main %}
+  {% if data['web'] === "no" %}
+    <div class="scrollable-content">
+  {% endif %}
+
+  <div class="ios-body">
+    <div class="ios-wallpaper"></div>
+    <div class="ios-status-bar">
+      <div class="ios-status-left">
+        <span>5G</span>
+      </div>
+      <div class="ios-status-right">
+        <span>82%</span>
+        <div class="ios-battery-icon">
+          <div class="ios-battery-level"></div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="ios-time" id="time">10:09</div>
+    <div class="ios-date" id="date">Tuesday, February 25</div>
+
+    {% block content %}
+    {% endblock %}
+
+  </div>
+
+  {% if data['web'] === "no" %}
+  </div>
+  {% endif %}
+{% endblock %}
+
+<!-- FOOTER -->
+{% block footer %}
+{% endblock %}
+
+<!-- PAGE SCRIPTS  -->
+{% block pageScripts %}
+  <script>
+    // Update time
+    function updateTime() {
+      const now = new Date();
+      let hours = now.getHours();
+      let minutes = now.getMinutes();
+      
+      // Format time
+      if (minutes < 10) minutes = '0' + minutes;
+      
+      document.getElementById('time').textContent = hours + ':' + minutes;
+    }
+    
+    // Update date
+    function updateDate() {
+      const now = new Date();
+      const options = { weekday: 'long', month: 'long', day: 'numeric' };
+      const dateString = now.toLocaleDateString('en-US', options);
+      
+      document.getElementById('date').textContent = dateString;
+    }
+    
+    // Initial update
+    updateTime();
+    updateDate();
+    
+    // Update time every minute
+    setInterval(updateTime, 60000);
+  </script>
+{% endblock %}
