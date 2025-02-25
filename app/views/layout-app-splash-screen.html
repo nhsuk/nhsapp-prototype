@@ -7,11 +7,19 @@
 {% endblock %}
 
 {% block customStyles %}
-  <style>
-    body {
-      background-color: #005eb8 !important;
-    }
-  </style>
+  {% if overlay = true %}
+    <style>
+      body {
+        background-color: #004B93 !important;
+      }
+    </style>
+  {% else %}
+    <style>
+      body {
+        background-color: #005eb8 !important;
+      }
+    </style>
+  {% endif %}
 {% endblock %}
 
 <!-- HEADER -->
