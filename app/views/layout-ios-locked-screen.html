@@ -82,4 +82,32 @@
     // Update time every minute
     setInterval(updateTime, 60000);
   </script>
+
+  <script>
+    // Wait for the DOM to be fully loaded
+    document.addEventListener("DOMContentLoaded", function() {
+        // Get the element with ID "ios-notification"
+        const notification = document.getElementById("ios-notification");
+        
+        // Initially make sure it's hidden and set up for animation
+        if (notification) {
+            // Set initial styles
+            notification.style.opacity = "0";
+            notification.style.display = "none";
+            notification.style.transition = "opacity 0.5s ease-in-out";
+            
+            // Set a timeout to show the element after 3 seconds
+            setTimeout(function() {
+                // Make the element visible but still transparent
+                notification.style.display = "flex";
+                
+                // Force browser to recognize the display change before starting animation
+                setTimeout(function() {
+                    // Trigger the fade-in
+                    notification.style.opacity = "1";
+                }, 10);
+            }, 3000); // 3000 milliseconds = 3 seconds
+        }
+    });
+  </script>
 {% endblock %}
