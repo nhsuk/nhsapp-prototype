@@ -14,6 +14,7 @@ module.exports = {
   "userFirstName": "mary",
   "userLastName": "swanson",
   "nhsNumber": "123 456 7890",
+  "dob": "15 March 1984",
 
   // Set version of the app
   "version": "2.36.6 (2.36.0)",

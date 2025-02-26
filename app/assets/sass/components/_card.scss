@@ -191,7 +191,7 @@ $card-blue-color: $nhsuk-link-active-color;
   }
 
   .nhsapp-card__container {
-    border-color: $card-blue-color;
+    border-color: rgba($card-blue-color, 0.2);
   }
 
   .nhsapp-card__link {
