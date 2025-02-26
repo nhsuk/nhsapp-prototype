@@ -96,7 +96,7 @@
             notification.style.display = "none";
             notification.style.transition = "opacity 0.5s ease-in-out";
             
-            // Set a timeout to show the element after 3 seconds
+            // Set a timeout to show the element after 2 seconds
             setTimeout(function() {
                 // Make the element visible but still transparent
                 notification.style.display = "flex";
@@ -106,7 +106,7 @@
                     // Trigger the fade-in
                     notification.style.opacity = "1";
                 }, 10);
-            }, 3000); // 3000 milliseconds = 3 seconds
+            }, 2000); // 2000 milliseconds = 2 seconds
         }
     });
   </script>
