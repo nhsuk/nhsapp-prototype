@@ -6,8 +6,20 @@
   {{ pageHeading }} - NHS App prototype
 {% endblock %}
 
-{% block customMetaData %}
-  <meta name="theme-color" content="#005eb8">
+{% block customStyles %}
+  {% if overlay === true %}
+    <style>
+      body {
+        background-color: #004B93 !important;
+      }
+    </style>
+  {% else %}
+    <style>
+      body {
+        background-color: #005eb8 !important;
+      }
+    </style>
+  {% endif %}
 {% endblock %}
 
 <!-- HEADER -->

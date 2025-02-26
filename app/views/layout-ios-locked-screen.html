@@ -1,0 +1,113 @@
+{% extends 'layout-app.html' %}
+
+{% block customStyles %}
+  <style>
+    body {
+      background-color: #8CDCFE !important;
+    }
+  </style>
+{% endblock %}
+
+<!-- HEADER -->
+{% block header %}
+{% endblock %}
+
+{% block main %}
+  {% if data['web'] === "no" %}
+    <div class="scrollable-content">
+  {% endif %}
+
+  <div class="ios-body">
+    <div class="ios-wallpaper"></div>
+    
+    {% if statusBar === true %}
+    <div class="ios-status-bar">
+      <div class="ios-status-left">
+        <span>5G</span>
+      </div>
+      <div class="ios-status-right">
+        <span>82%</span>
+        <div class="ios-battery-icon">
+          <div class="ios-battery-level"></div>
+        </div>
+      </div>
+    </div>
+    {% endif %}
+    
+    <div class="ios-time" id="time">15:00</div>
+    <div class="ios-date" id="date">Tuesday, February 25</div>
+
+    {% block content %}
+    {% endblock %}
+
+  </div>
+
+  {% if data['web'] === "no" %}
+  </div>
+  {% endif %}
+{% endblock %}
+
+<!-- FOOTER -->
+{% block footer %}
+{% endblock %}
+
+<!-- PAGE SCRIPTS  -->
+{% block pageScripts %}
+  <script>
+    // Update time
+    function updateTime() {
+      const now = new Date();
+      let hours = now.getHours();
+      let minutes = now.getMinutes();
+      
+      // Format time
+      if (minutes < 10) minutes = '0' + minutes;
+      
+      document.getElementById('time').textContent = hours + ':' + minutes;
+    }
+    
+    // Update date
+    function updateDate() {
+      const now = new Date();
+      const options = { weekday: 'long', month: 'long', day: 'numeric' };
+      const dateString = now.toLocaleDateString('en-US', options);
+      
+      document.getElementById('date').textContent = dateString;
+    }
+    
+    // Initial update
+    updateTime();
+    updateDate();
+    
+    // Update time every minute
+    setInterval(updateTime, 60000);
+  </script>
+
+  <script>
+    // Wait for the DOM to be fully loaded
+    document.addEventListener("DOMContentLoaded", function() {
+        // Get the element with ID "ios-notification"
+        const notification = document.getElementById("ios-notification");
+        
+        // Initially make sure it's hidden and set up for animation
+        if (notification) {
+            // Set initial styles
+            notification.style.opacity = "0";
+            notification.style.display = "none";
+            notification.style.transition = "opacity 0.5s ease-in-out";
+            
+            // Set a timeout to show the element after 2 seconds
+            setTimeout(function() {
+                // Make the element visible but still transparent
+                notification.style.display = "flex";
+                
+                // Force browser to recognize the display change before starting animation
+                setTimeout(function() {
+                    // Trigger the fade-in
+                    notification.style.opacity = "1";
+                }, 10);
+            }, 2000); // 2000 milliseconds = 2 seconds
+        }
+    });
+  </script>
+{% endblock %}
