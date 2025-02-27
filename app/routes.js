@@ -52,4 +52,13 @@ router.post('/pages/services/gp-appointment-invite-answer', function (req, res) 
   }
 })
 
+// Set prototype to native view.
+router.get('/frame', (req, res) => {
+  let data = req.session.data
+
+  data.web = "no"
+  req.session.data = data
+  res.render("frame")
+})
+
 module.exports = router;
