@@ -2,6 +2,16 @@
 
 {% set pageHeading = "Native prototype" %}
 
+{% set mainClasses = "nhsuk-main-wrapper--s" %}
+
+{% block beforeContent %}
+  {{ backLink({
+    "text": "Back",
+    "classes": "nhsuk-u-margin-top-4 nhsuk-u-margin-bottom-0",
+    href: "/"
+  }) }}
+{% endblock %}
+
 {% block content %}
 
   <div class="nhsuk-grid-row">
