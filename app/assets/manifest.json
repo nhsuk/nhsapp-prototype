@@ -1,11 +1,11 @@
 {
-  "name": "NHS App prototype",
-  "short_name": "App",
-  "description": "Testing new NHS App design styls, components and patterns.",
+  "name": "NHS App test prototype",
+  "short_name": "NHS App test",
+  "description": "Testing new design styles, components and patterns for the NHS App.",
   "display": "standalone",
-  "start-url": "/pages/login",
+  "start_url": "/pages/login",
   "scope": "/",
-  "background-color": "transparent",
+  "background_color": "#f0f4f5",
   "icons": [
     {
       "src": "/images/nhs-icon-512.png",

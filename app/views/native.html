@@ -1,6 +1,16 @@
 {% extends 'layout.html' %}
 
-{% set pageHeading = "Native prototype" %}
+{% set pageHeading = "How to make your prototype feel more app-like" %}
+
+{% set mainClasses = "nhsuk-main-wrapper--s" %}
+
+{% block beforeContent %}
+  {{ backLink({
+    "text": "Back",
+    "classes": "nhsuk-u-margin-top-4 nhsuk-u-margin-bottom-0",
+    href: "/"
+  }) }}
+{% endblock %}
 
 {% block content %}
 
@@ -22,17 +32,22 @@
         }
       </script>
 
-      <h2>Add to home screen</h2>
+      <p>You can add the prototype to your home screen to make it feel like a native app on your phone. This will provide a more realistic app-like experience compared to using it in your browser.</p>
 
-      <p>Use the share icon to add this prototype to your home screen. This will make the prototype seem more realistic.</p>
-
-      <h3>To do this:</h3>
+      <h3>To install it on your home screen:</h3>
 
       <ol>
-        <li>Select the share icon</li>
-        <li>Select Add to Home Screen</li>
-        <li>Select the added app icon to open the prototype</li>
+        <li>Tap the share icon in your browser</li>
+        <li>Select "Add to Home Screen"</li>
       </ol>
+
+      <img class="app-img" alt="" src="/images/app-like-add.png">
+
+      <p>Once added, tap the new icon on your home screen to launch.</p>
+
+      <img class="app-img" alt="" src="/images/app-like-open.png">
+
+      <p>After installation, the prototype will open in full-screen mode without browser navigation elements.</p>  
 
     </div>
   </div>

@@ -1,13 +1,12 @@
 {% extends 'layout.html' %}
 
+{% set mainClasses = "nhsuk-main-wrapper--s" %}
+
 {% block pageTitle %}
   NHS App prototype
 {% endblock %}
 
 {% block beforeContent %}
-{% endblock %}
-
-{% block outerContent %}
 {% endblock %}
 
 {% block content %}
@@ -27,15 +26,48 @@
           <a href="/components/">Components</a>
         </li>
         <li>
-          <a href="/native">Native - install page</a>
+          <a href="/native">Make your prototype feel more app-like</a>
         </li>
         <li>
-          <a href="/frame">Mobile frame</a>
+          <a href="/frame">View prototype in a mobile frame</a>
         </li>
       </ul>
 
       <h2>Prototype data</h2>
-      <p>The prototype uses <a href="/data-settings">default data</a> to create dynamic content, for example, the username that gets displayed on the home page.</p> 
+      <p>You can <a href="/data-settings">use default data to create dynamic content</a>.</p> 
+
+      <hr>
+
+      <h2>Built using</h2>
+
+      {{ summaryList({
+        rows: [
+          {
+            key: {
+              text: "NHS prototype kit"
+            },
+            value: {
+              text: "v5.3.0"
+            }
+          },
+          {
+            key: {
+              text: "NHS.UK frontend"
+            },
+            value: {
+              text: "v8.3.0"
+            }
+          },
+          {
+            key: {
+              text: "NHS App frontend"
+            },
+            value: {
+              text: "v2.3.0"
+            }
+          }
+        ]
+      }) }}
 
     </div>
   </div>

@@ -6,19 +6,11 @@
   {{ pageHeading }} - NHS App prototype
 {% endblock %}
 
-{% block customStyles %}
+{% block head %}
   {% if overlay === true %}
-    <style>
-      body {
-        background-color: #004B93 !important;
-      }
-    </style>
+    <meta name="theme-color" content="#004B93">
   {% else %}
-    <style>
-      body {
-        background-color: #005eb8 !important;
-      }
-    </style>
+    <meta name="theme-color" content="#005eb8">
   {% endif %}
 {% endblock %}
 
@@ -33,7 +25,7 @@
   <div class="app-login-wrapper">
 {% endif %}
   <div class="nhsuk-width-container">
-    {% block outerContent %}{% endblock %}
+    {% block beforeContent %}{% endblock %}
     <main class="nhsuk-main-wrapper nhsuk-main-wrapper--s" id="maincontent" role="main">
       {% block content %}{% endblock %}
     </main>
