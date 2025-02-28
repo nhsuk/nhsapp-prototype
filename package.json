@@ -34,7 +34,7 @@
     "gulp-sass": "^5.1.0",
     "lodash": "^4.17.21",
     "nhsapp-frontend": "^2.3.0",
-    "nhsuk-frontend": "^8.3.0",
+    "nhsuk-frontend": "^9.3.0",
     "nunjucks": "^3.2.4",
     "path": "^0.12.7",
     "sass": "^1.79.5"
