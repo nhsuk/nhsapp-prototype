@@ -1,0 +1,94 @@
+{% extends 'layout-app.html' %}
+
+{% set hub = "Your health" %}
+
+{% set backLink = true %}
+
+{% set pageHeading = "Full blood count - FBC" %}
+
+{% block content %}
+
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-full">
+
+      {{ dynamicPageTitle({
+        title: pageHeading,
+        titleSecondary: true
+      })}}
+
+      <dl class="nhsuk-summary-list nhsuk-summary-list--no-border nhsuk-u-margin-bottom-5">
+        <div class="nhsuk-summary-list__row nhsuk-u-margin-bottom-5">
+          <dt class="nhsuk-summary-list__key nhsuk-u-font-size-26">
+            Test date
+          </dt>
+          <dd class="nhsuk-summary-list__value">
+            5 August 2024
+          </dd>
+        </div>
+        <div class="nhsuk-summary-list__row nhsuk-u-margin-bottom-5">
+          <dt class="nhsuk-summary-list__key nhsuk-u-font-size-26">
+            Healthcare professional's comment
+          </dt>
+          <dd class="nhsuk-summary-list__value">
+            Abnormal - but expected. Keep routine appointment (non-urgent)
+          </dd> 
+        </div>
+        <div class="nhsuk-summary-list__row nhsuk-u-margin-bottom-5">
+          <dt class="nhsuk-summary-list__key nhsuk-u-font-size-26">
+            Labratory comment
+          </dt>
+          <dd class="nhsuk-summary-list__value">
+            No comment
+          </dd>  
+        </div>
+      </dl>
+
+      <p><a href="#">What is a Full blood count - FBC?</a></p>
+
+      <hr class="nhsuk-section-break nhsuk-section-break--l nhsuk-section-break--visible app-section-break--width-8">
+
+      <h2>Your results</h2>
+
+      <hr class="nhsuk-section-break nhsuk-section-break--l nhsuk-section-break--visible app-section-break--width-4">
+
+      <h3>Haemoglobin estimation: <span class="nhsuk-u-display-block">146 g/l</span></h3>
+      <p>The reference range is between 135 to 180 g/L.</p>
+      <hr class="nhsuk-section-break nhsuk-section-break--visible">
+      <img style='max-width:100%;' class='nhsuk-u-margin-bottom-0' src='/images/test-result-graph.png' alt=''>
+      <hr class="nhsuk-section-break nhsuk-section-break--m nhsuk-section-break--visible">
+      <h4>Labratory comment</h4>
+      <p>Haemoglobin variant previously detected - sample sent for haemoglobin variant testing. MC</p>
+      <hr class="nhsuk-section-break nhsuk-section-break--m nhsuk-section-break--visible">
+      <p><a href="#">What is a haemoglobin estimation test?</a></p>
+      <hr class="nhsuk-section-break nhsuk-section-break--m nhsuk-section-break--visible">
+      <p><a href="#">View test result history</a></p>
+
+      <hr class="nhsuk-section-break nhsuk-section-break--l nhsuk-section-break--visible app-section-break--width-4">
+
+      <h3>Total white cell count: <span class="nhsuk-u-display-block">8.84 10*9/L</span></h3>
+      <p>The reference range is between 4.00 to 11.00 10*9/L.</p>
+      <hr class="nhsuk-section-break nhsuk-section-break--visible">
+      <img style='max-width:100%;' class='nhsuk-u-margin-bottom-0' src='/images/test-result-graph.png' alt=''>
+      <hr class="nhsuk-section-break nhsuk-section-break--m nhsuk-section-break--visible">
+      <p><a href="#">What is a total white cell count test??</a></p>
+      <hr class="nhsuk-section-break nhsuk-section-break--m nhsuk-section-break--visible">
+      <p><a href="#">View test result history</a></p>
+
+      <hr class="nhsuk-section-break nhsuk-section-break--l nhsuk-section-break--visible app-section-break--width-4">
+
+      <h3>Platelet count: <span class="nhsuk-u-display-block">146 10*9/L</span></h3>
+      <p>The reference range is between 135 to 180 10*9/L.</p>
+      <hr class="nhsuk-section-break nhsuk-section-break--visible">
+      <img style='max-width:100%;' class='nhsuk-u-margin-bottom-0' src='/images/test-result-graph.png' alt=''>
+      <hr class="nhsuk-section-break nhsuk-section-break--m nhsuk-section-break--visible">
+      <p><a href="#">What is a total white cell count test??</a></p>
+      <hr class="nhsuk-section-break nhsuk-section-break--m nhsuk-section-break--visible">
+      <p><a href="#">View test result history</a></p>
+
+      <hr class="nhsuk-section-break nhsuk-section-break--l nhsuk-section-break--visible app-section-break--width-4">
+
+
+    </div>
+  </div>
+
+  {% endblock %}
