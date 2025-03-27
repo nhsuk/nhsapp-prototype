@@ -1,0 +1,30 @@
+{% extends 'components/layout.html' %}
+
+{% set pageHeading = "Section breaks (divider lines)" %}
+{% set backlogID = "15" %}
+
+{% block innerContent %}
+
+  <p><a href="https://service-manual.nhs.uk/design-system/styles/typography#section-break">NHS design system section break</a> with modifier classes to make the border thicker.</p>
+
+  <h2>Border width 2px</h2>
+  <p>Modifier class: <code>app-section-break--width-2</code></p>
+
+  <div class="example">
+    <hr class="nhsuk-section-break nhsuk-section-break--xl nhsuk-section-break--visible app-section-break--width-2">
+    <hr class="nhsuk-section-break nhsuk-section-break--l nhsuk-section-break--visible app-section-break--width-2">
+    <hr class="nhsuk-section-break nhsuk-section-break--m nhsuk-section-break--visible app-section-break--width-2">
+    <hr class="nhsuk-section-break nhsuk-section-break--visible app-section-break--width-2">
+  </div>
+
+  <h2>Border width 4px</h2>
+  <p>Modifier class: <code>app-section-break--width-4</code></p>
+
+  <div class="example">
+    <hr class="nhsuk-section-break nhsuk-section-break--xl nhsuk-section-break--visible app-section-break--width-4">
+    <hr class="nhsuk-section-break nhsuk-section-break--l nhsuk-section-break--visible app-section-break--width-4">
+    <hr class="nhsuk-section-break nhsuk-section-break--m nhsuk-section-break--visible app-section-break--width-4">
+    <hr class="nhsuk-section-break nhsuk-section-break--visible app-section-break--width-4">
+  </div>
+
+{% endblock %}
