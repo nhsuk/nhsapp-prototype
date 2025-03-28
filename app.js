@@ -189,10 +189,10 @@ nunjucksAppEnv = nunjucks.configure(exampleTemplateViews, {
 nunjucksAppEnv.addGlobal('version', packageInfo.version);
 
 // Clear all data in session if you open /examples/passing-data/clear-data
-app.post('/clear-data', function (req, res) {
-  req.session.data = {}
-  res.render('clear-data-success')
-})
+app.post('/clear-data', (req, res) => {
+  req.session.data = {};
+  res.render('clear-data-success');
+});
 
 // Add Nunjucks filters
 utils.addNunjucksFilters(nunjucksAppEnv);
