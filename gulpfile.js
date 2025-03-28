@@ -25,7 +25,15 @@ sass.compiler = require('sass');
 function compileStyles() {
   return gulp
     .src(['app/assets/sass/**/*.scss'])
-    .pipe(sass())
+    .pipe(sass({
+      silenceDeprecations: [
+       'legacy-js-api',
+       'color-functions',
+       'mixed-decls',
+       'global-builtin',
+       'import'
+      ],
+     }))
     .pipe(gulp.dest('public/css'))
     .on('error', (err) => {
       console.log(err);
