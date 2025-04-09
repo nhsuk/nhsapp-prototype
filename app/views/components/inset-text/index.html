@@ -1,0 +1,50 @@
+{% extends 'components/layout.html' %}
+
+{% set pageHeading = "Inset text (grey variant)" %}
+{% set backlogID = "" %}
+
+{% block innerContent %}
+
+  <p>Being tested in the 'Register your organ donation decision' service.</p>
+
+  <div class="example">
+
+    <div class="nhsuk-inset-text nhsuk-u-margin-top-4 nhsuk-u-margin-bottom-4 nhsapp-inset-text--grey">
+      <span class="nhsapp-tag nhsapp-tag--green nhsuk-u-margin-bottom-4">Yes, I want to donate</span>
+      <p>I want to donate all of my organs and tissue.</p>
+      <hr class="nhsuk-section-break nhsuk-section-break--m nhsuk-section-break--visible">
+      <p>I would like NHS staff to discuss my faith and beliefs with my family if I am able to donate.</p>
+      <hr class="nhsuk-section-break nhsuk-section-break--m nhsuk-section-break--visible">
+      <p class="nhsuk-u-secondary-text-color">You recorded this decision on: 3 February 2024</p>
+    </div>
+
+  </div>
+
+  <div class="example">
+
+    <div class="nhsuk-inset-text nhsuk-u-margin-top-4 nhsuk-u-margin-bottom-4 nhsapp-inset-text--grey">
+      <span class="nhsapp-tag nhsapp-tag--green nhsuk-u-margin-bottom-4">Yes, I want to donate</span>
+      <p>I want to donate some of my organs and tissue. You have registered to donate:</p>
+      <ul>
+        <li>Kidneys</li>
+        <li>Corneas</li>
+        <li>Heart</li>
+        <li>Lungs</li>
+        <li>Liver</li>
+        <li>Pancreas</li>
+      </ul>
+
+      <p>You have registered not to donate:</p>
+      <ul>
+        <li>Tissue</li>
+        <li>Small bowel</li>
+      </ul>
+      <hr class="nhsuk-section-break nhsuk-section-break--m nhsuk-section-break--visible">
+      <p>I would like NHS staff to discuss my faith and beliefs with my family if I am able to donate.</p>
+      <hr class="nhsuk-section-break nhsuk-section-break--m nhsuk-section-break--visible">
+      <p class="nhsuk-u-secondary-text-color">You recorded this decision on: 3 February 2024</p>
+    </div>
+
+  </div>
+
+{% endblock %}
