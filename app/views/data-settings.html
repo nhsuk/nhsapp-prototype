@@ -53,6 +53,32 @@
           ]
         }) }}
 
+        {{ radios({
+          "idPrefix": "nativePrototype",
+          "name": "nativePrototype",
+          "fieldset": {
+            "legend": {
+              "text": "Native prototype?",
+              "classes": "nhsuk-fieldset__legend--m"
+            }
+          },
+          "hint": {
+            "text": "This hides the native top and bottom navigation."
+          },
+          "items": [
+            {
+              "value": "yes",
+              "text": "Yes",
+              checked: checked("nativePrototype", "yes")
+            },
+            {
+              "value": "no",
+              "text": "No",
+              checked: checked("nativePrototype", "no")
+            }
+          ]
+        }) }}
+
         <hr>
 
         {{ radios({

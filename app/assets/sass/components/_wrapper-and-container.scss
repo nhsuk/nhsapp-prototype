@@ -20,8 +20,12 @@
   padding-top: 0;
 }
 
-// Web main wrapper if linked profile
 .app-main-wrapper--no-bottom-padding {
+  padding-bottom: 0;
+}
+
+// Web main wrapper if linked profile
+.app-main-wrapper--bottom-padding {
   padding-bottom: 80px; // Needs 80px padding for global nav
 }
 
