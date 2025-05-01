@@ -5,6 +5,9 @@ module.exports = {
   // Defaults page view to native
   "web": "no", 
 
+  // If "yes", removes native top and bottom nav for native prototyping
+  "nativePrototype": "yes",
+
   // Set linked profile details
   "linkedProfileFirstName": "Toby",
   "linkedProfileLastName": "Day",
