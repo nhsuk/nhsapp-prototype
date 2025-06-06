@@ -5,6 +5,8 @@ jest.mock('../../lib/core_filters');
 const customFilters = require('../../app/filters');
 jest.mock('../../app/filters');
 
+jest.mock('../../app/data/session-data-defaults.js', () => ({}));
+
 test('test addNunjucksFilters filter added', () => {
     coreFilters.mockImplementation(() => {return {1: "core-filter"};});
     customFilters.mockImplementation(() => {return {2: "custom-filter"};});
