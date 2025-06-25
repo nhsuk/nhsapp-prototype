@@ -12,13 +12,13 @@
 }
 
 .app-u-full-width-mobile {
-  @include mq($until: tablet) {
+  @include nhsuk-media-query($until: tablet) {
     @include full-width-break-container()
   }
 }
 
 .app-u-full-width-tablet {
-  @include mq($until: desktop) {
+  @include nhsuk-media-query($until: desktop) {
     @include full-width-break-container()
   }
 }

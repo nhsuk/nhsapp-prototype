@@ -1,6 +1,6 @@
 // App container
 .nhsuk-width-container {  
-  @include mq($from: tablet, $until: desktop) {
+  @include nhsuk-media-query($from: tablet, $until: desktop) {
     margin: 0 32px; // to override container margin on tablet
   }
 }
