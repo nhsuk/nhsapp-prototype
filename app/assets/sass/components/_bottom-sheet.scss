@@ -83,7 +83,7 @@
 }
 
 .app-bottom-sheet__heading {
-  @include nhsuk-typography-responsive(22);
+  @include nhsuk-font-size(22);
 
   margin-bottom: 0;
   padding-right: 48px;

@@ -8,7 +8,7 @@
   .nhsuk-logo{
     @include nhsuk-responsive-margin(3, "bottom");
 
-    @include mq($from: tablet) {
+    @include nhsuk-media-query($from: tablet) {
       height: nhsuk-spacing(5);
       width: 80px; // do we need to increase nhsuk spacing scale?
     }

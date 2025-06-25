@@ -11,14 +11,14 @@
   text-align: center;
   width: 100%;
 
-  @include mq($from: tablet) {
+  @include nhsuk-media-query($from: tablet) {
     bottom: 84px;
   }
 
   .app-button {
     width: 100%;
 
-    @include mq($from: tablet) {
+    @include nhsuk-media-query($from: tablet) {
       width: 60%;
     }
   }

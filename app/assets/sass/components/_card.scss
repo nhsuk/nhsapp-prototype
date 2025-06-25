@@ -11,7 +11,7 @@
 // Large card with image
 // Used for new campaign card
 .app-card-link--full-width {
-  @include mq($from: desktop) {
+  @include nhsuk-media-query($from: desktop) {
     display: flex;
 
     .app-card-link__media {
@@ -29,7 +29,7 @@
     }
 
   }
-  @include mq($from: large-desktop) {
+  @include nhsuk-media-query($from: large-desktop) {
     .app-card-link__media {
       flex-grow: 2;
     }
@@ -138,7 +138,7 @@
 // Gives correct padding left and right when full width
 .app-u-full-width-tablet {
   .app-card__content {
-    @include mq($from: tablet, $until: desktop) {
+    @include nhsuk-media-query($from: tablet, $until: desktop) {
       padding-left: nhsuk-spacing(5);
       padding-right: nhsuk-spacing(5);
     }

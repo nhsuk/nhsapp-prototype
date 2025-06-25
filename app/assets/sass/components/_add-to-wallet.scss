@@ -11,7 +11,7 @@
   max-height: nhsuk-spacing(7);
   max-width: 100%;
 
-  @include mq($from: tablet) {
+  @include nhsuk-media-query($from: tablet) {
     max-height: nhsuk-spacing(8);
   }
 }

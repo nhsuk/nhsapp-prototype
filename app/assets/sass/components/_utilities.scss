@@ -1,5 +1,5 @@
 // Utility class for center aligning an element
-@include mq($until: tablet) {
+@include nhsuk-media-query($until: tablet) {
   .app-u-align-center--mobile {
     display: block;
     margin: 0 auto;

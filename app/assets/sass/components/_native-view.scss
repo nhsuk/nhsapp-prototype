@@ -2,7 +2,7 @@
 .nhs-app-native {
 
   // Full width buttons on mobile
-  @include mq($until: tablet) {
+  @include nhsuk-media-query($until: tablet) {
     .nhsuk-button {
       width: 100%;
     }

@@ -12,7 +12,7 @@
   + .app-link--with-icon {
     margin-top: - nhsuk-spacing(3);
 
-    @include mq($from: tablet) {
+    @include nhsuk-media-query($from: tablet) {
       margin-top: - nhsuk-spacing(4);
     }
   }

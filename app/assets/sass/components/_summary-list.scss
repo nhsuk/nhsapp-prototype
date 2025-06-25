@@ -22,7 +22,7 @@
   }
 
   .nhsuk-summary-list__key {
-    @include mq($until: tablet) {
+    @include nhsuk-media-query($until: tablet) {
       width: 50%;
     }
   }

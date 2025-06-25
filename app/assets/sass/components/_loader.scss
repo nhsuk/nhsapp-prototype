@@ -38,7 +38,7 @@
     animation: spin 2s linear infinite;
     border: nhsuk-spacing(2) solid darken(#f0f4f5, 10%);
     border-radius: 50%;
-    border-top: nhsuk-spacing(2) solid tint($color_nhsuk-blue, 15%);
+    border-top: nhsuk-spacing(2) solid nhsuk-tint($color_nhsuk-blue, 15%);
     display: inline-block;
     height: 56px;
     margin: auto;

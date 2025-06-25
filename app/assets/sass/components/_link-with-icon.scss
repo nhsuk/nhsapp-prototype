@@ -15,7 +15,7 @@ $app-link-with-icon-size-tablet: nhsuk-spacing(4) + 4px;
     height: $app-link-with-icon-size-mobile;
     width: $app-link-with-icon-size-mobile;
     
-    @include mq($from: tablet) {
+    @include nhsuk-media-query($from: tablet) {
       height: $app-link-with-icon-size-tablet;
       width: $app-link-with-icon-size-tablet;
     }
