@@ -1,0 +1,62 @@
+{% extends 'layout-app.html' %}
+
+{% set hub = "Services" %}
+
+{% set backLink = true %}
+
+{% set pageHeading = "Select an appointment type" %}
+
+{% block content %}
+
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-full">
+
+      <form id="form" method="post" action="/pages/page-templates/question-page-checkboxes" novalidate="novalidate">
+
+        {{ radios({
+          idPrefix: "gp-appointment-type",
+          name: "gp-appointment-type",
+          fieldset: {
+            legend: {
+              text: pageHeading,
+              classes: "nhsuk-fieldset__legend--l",
+              isPageHeading: true
+            }
+          },
+          "items": [
+            {
+              value: "Routine GP",
+              text: "Routine GP",
+              checked: checked("gp-appointment-type", "Routine GP")
+            },
+            {
+              value: "Asthma clinic",
+              text: "Asthma clinic",
+              checked: checked("gp-appointment-type", "Asthma clinic")
+            },
+            {
+              value: "Blood test",
+              text: "Blood test",
+              checked: checked("gp-appointment-type", "Blood test")
+            },
+            {
+              value: "B12 Injection",
+              text: "B12 Injection",
+              checked: checked("gp-appointment-type", "B12 Injection")
+            }
+          ]
+        }) }}
+
+        {{ button({
+          text: "Continue",
+          classes: "nhsapp-button"
+        }) }}
+        
+      </form>
+
+    </div>
+  </div>
+
+  {% endblock %}
+
+

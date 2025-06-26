@@ -1,0 +1,38 @@
+{% extends 'layout-app.html' %}
+
+{% set hub = "Services" %}
+
+{% set backLink = true %}
+
+{% set pageHeading = "Tell us how we can help" %}
+
+{% block content %}
+
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-full">
+
+      <form id="form" method="post" action="/pages/page-templates/check-answers" novalidate="novalidate">
+        {{ textarea({
+          name: "gp-appointment-reason",
+          id: "gp-appointment-reason",
+          label: {
+            text: pageHeading,
+            classes: "nhsuk-label--l nhsuk-u-margin-bottom-2",
+            isPageHeading: true
+          },
+          hint: {
+            text: "Describe your problem in a few words. Your note may not be seen or replied to."
+          }
+        }) }}
+
+        {{ button({
+          text: "Continue",
+          classes: "nhsapp-button"
+        }) }}
+        
+      </form>
+
+    </div>
+  </div>
+
+  {% endblock %}
