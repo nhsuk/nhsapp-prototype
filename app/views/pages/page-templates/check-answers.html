@@ -3,7 +3,6 @@
 {% set hub = "Services" %}
 
 {% set backLink = true %}
-{% set backLinkURL = "/pages/services/gp-appointment-reason" %}
 
 {% set pageHeading = "Check your appointment details before confirming" %}
 
@@ -15,7 +14,8 @@
       <!-- DYNAMIC PAGE TITLE -->
       {{ dynamicPageTitle({
         title: pageHeading,
-        titleSecondary: true
+        titleSecondary: true,
+        titleSmall: true
       })}}
 
       <dl class="nhsuk-summary-list">
@@ -27,14 +27,10 @@
           <dd class="nhsuk-summary-list__value">
             {{ data['gp-appointment-type'] or 'General' }}
           </dd>
-        </div>
-
-        <div class="nhsuk-summary-list__row">
-          <dt class="nhsuk-summary-list__key">
-            Location
-          </dt>
-          <dd class="nhsuk-summary-list__value">
-            {{ data['gp-appointment-location'] or 'York Road Practice' }}
+          <dd class="nhsuk-summary-list__actions">
+            <a class="nhsuk-link--no-visited-state" href="#">
+              Change<span class="nhsuk-u-visually-hidden"> appointment type</span>
+            </a>
           </dd>
         </div>
 
@@ -43,29 +39,26 @@
             Clinician
           </dt>
           <dd class="nhsuk-summary-list__value">
-            {% if data['gp-appointment-time'] in ["1", "4", "5", "9", "13", "16", "17", "21", "25", "29", "33", "37"] %}
-              Dr Max Smith
-            {% else %}
-              Dr Emily Taylor
-            {% endif %}
+            {{ data['appointment-clinician'] or 'Dr Max Smith (Male)' }}
+          </dd>
+          <dd class="nhsuk-summary-list__actions">
+            <a class="nhsuk-link--no-visited-state" href="#">
+              Change<span class="nhsuk-u-visually-hidden"> clinician</span>
+            </a>
           </dd>
         </div>
 
         <div class="nhsuk-summary-list__row">
           <dt class="nhsuk-summary-list__key">
-            Date of appointment
+            Time and date
           </dt>
           <dd class="nhsuk-summary-list__value">
-              Monday 20 November 2023
+            {{ data['appointment-time'] or '9:00am' }} on {{ data['appointment-date'] or 'Wednesday 29 May 2024' }}
           </dd>
-        </div>
-
-        <div class="nhsuk-summary-list__row">
-          <dt class="nhsuk-summary-list__key">
-            Time of appointment
-          </dt>
-          <dd class="nhsuk-summary-list__value">
-              9:00am
+          <dd class="nhsuk-summary-list__actions">
+            <a class="nhsuk-link--no-visited-state" href="#">
+              Change <span class="nhsuk-u-visually-hidden"> time and date of appointment</span>
+            </a>
           </dd>
         </div>
 
@@ -76,21 +69,16 @@
           <dd class="nhsuk-summary-list__value">
             {{ data['gp-appointment-reason'] or 'Pain in my foot' }}
           </dd>
+          <dd class="nhsuk-summary-list__actions">
+            <a class="nhsuk-link--no-visited-state" href="#">
+              Change<span class="nhsuk-u-visually-hidden"> reason for appointment</span>
+            </a>
+          </dd>
         </div>
    
       </dl>
 
-
-      <form id="form" method="post" action="/pages/services/gp-appointment-confirmed" novalidate="novalidate">
-
-        <!--{% if data['web'] === "yes" %}
-
-          {{ button({
-            text: "Confirm appointment",
-            classes: "nhsapp-button"
-          }) }}
-
-        {% endif %}-->
+      <form id="form" method="post" action="#" novalidate="novalidate">
 
         {{ button({
           text: "Confirm appointment",
