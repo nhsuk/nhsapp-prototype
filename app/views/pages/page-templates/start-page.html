@@ -1,0 +1,36 @@
+{% extends 'layout-app.html' %}
+
+{% set hub = "Services" %}
+
+{% set pageHeading = "Contact your GP about a document or update" %}
+
+{% block content %}
+
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+
+      <h1 class="nhsuk-u-margin-bottom-5">{{ pageHeading }}</h1>
+
+      <p>Your GP surgery provides this service. They use an online form supplied by Accurx.</p>
+
+      <p>You can use it to ask for things like:</p>
+
+      <ul clas="nhsuk-list">
+        <li>a fit note (sick note)</li>
+        <li>a doctor's letter</li>
+        <li>test results</li>
+      </ul>
+
+      <p>Your GP will then contact you with an appointment or guidance.</p>
+
+      {{ button({
+        text: "Continue to Accurx",
+        classes: "nhsapp-button"
+      }) }}
+
+      <p><a href="#">Find out more about Accurx in our privacy policy</a></p>
+
+    </div>
+  </div>
+
+  {% endblock %}

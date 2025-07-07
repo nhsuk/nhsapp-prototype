@@ -1,7 +1,7 @@
 {% extends 'layout.html' %}
 
 {% set pageHeading = "Components" %}
-{% set pageDescription = "Components available to use in the NHS App prototype." %}
+{% set pageDescription = "Use these components in your NHS App prototype layouts." %}
 
 {% set mainClasses = "nhsuk-main-wrapper--s" %}
 
@@ -19,6 +19,12 @@
 
       <h1>{{ pageHeading }}</h1>
 
+      <p class="nhsuk-lede-text">
+        {{ pageDescription }}
+      </p>
+
+      <h2>Design system componnets</h2>
+
       <p>In the NHS App prototype you can use all components from the:</p>
       <ul clas="nhsuk-list">
         <li>
@@ -29,9 +35,11 @@
         </li>
       </ul>
 
+      <hr class="nhsuk-section-break nhsuk-section-break--l nhsuk-section-break--visible app-section-break--width-4">
+
       <h2>V0 components</h2>
 
-      <p>You can also use components that exist in the old component library but will be either updated or deprecated soon.</p>
+      <p>V0 components come from an older internal library and may be replaced or removed.</p>
 
       <ul clas="nhsuk-list">
         <li>
@@ -57,9 +65,11 @@
         </li>
       </ul>
 
+      <hr class="nhsuk-section-break nhsuk-section-break--l nhsuk-section-break--visible app-section-break--width-4">
+
       <h2>Experimental components</h2>
 
-      <p>These are components not in the design system but you can experiment with for usability testing.</p>
+      <p>These are not yet part of the design system. Use them in prototypes to test usability or new patterns.</p>
 
       <ul clas="nhsuk-list">
         <li>
@@ -73,6 +83,8 @@
         </li>
       </ul>
 
+      <hr class="nhsuk-section-break nhsuk-section-break--l nhsuk-section-break--visible app-section-break--width-4">
+
       <h2>Native components</h2>
 
       <p>These are native components that have been built in HTML for testing purposes.</p>
@@ -85,6 +97,8 @@
           <a href="/components/app-bottom-navigation/">Bottom nav (native)</a>
         </li>
       </ul>
+
+      <hr class="nhsuk-section-break nhsuk-section-break--l nhsuk-section-break--visible app-section-break--width-4">
 
       <h2>Component backlog</h2>
 

@@ -1,7 +1,7 @@
 {% extends 'layout.html' %}
 
-{% set pageHeading = "Pages" %}
-{% set pageDescription = "Pages and layouts in the NHS App prototype." %}
+{% set pageHeading = "Page templates and layouts" %}
+{% set pageDescription = "A collection of pages, layouts, and design patterns to help you build and test NHS App prototypes quickly and consistently." %}
 
 {% set mainClasses = "nhsuk-main-wrapper--s" %}
 
@@ -25,6 +25,8 @@
 
       <h2>Layouts</h2>
 
+      <p>Found in <code>/app/views</code></p>
+
       <ul clas="nhsuk-list">
         <li>
           <a href="/layout-app">App layout (top and bottom nav)</a>
@@ -40,9 +42,11 @@
         </li>
       </ul>
 
-      <hr>
+      <hr class="nhsuk-section-break nhsuk-section-break--l nhsuk-section-break--visible app-section-break--width-4">
 
-      <h2>Notifications page</h2>
+      <h2>Notification pages</h2>
+
+      <p>Found in <code>/app/views/pages</code></p>
 
       <ul clas="nhsuk-list">
         <li>
@@ -53,9 +57,11 @@
         </li>
       </ul>
 
-      <hr>
+      <hr class="nhsuk-section-break nhsuk-section-break--l nhsuk-section-break--visible app-section-break--width-4">
 
       <h2>NHS App pages</h2>
+
+      <p>Found in <code>/app/views/pages</code></p>
 
       <h3>Login</h3>
 
@@ -131,6 +137,8 @@
         
         <h3>Messages {% if data['web'] === "yes" %}(Web){% else %}(Native){% endif %}</h3>
 
+        <p>Found in <code>/app/views/pages/messages</code></p>
+
         <ul clas="nhsuk-list">
           <li>
             <a href="/pages/messages/your-messages">Your messages</a>
@@ -145,6 +153,8 @@
 
         <h3>Account and settings {% if data['web'] === "yes" %}(Web){% else %}(Native){% endif %}</h3>
 
+        <p>Found in <code>/app/views/pages/account-and-settings</code></p>
+
         <ul clas="nhsuk-list">
           <li>
             <a href="/pages/account-and-settings/cookies-and-legal-agreement">Manage cookies and read legal information</a>
@@ -157,9 +167,11 @@
           </li>
         </ul> 
         
-        <hr>
+        <hr class="nhsuk-section-break nhsuk-section-break--l nhsuk-section-break--visible app-section-break--width-4">
 
         <h2>Page templates</h2>
+
+        <p>Found in <code>/pages/page-templates</code></p>
 
         <ul clas="nhsuk-list">
           <li>
@@ -182,7 +194,7 @@
           </li>
         </ul>
 
-        <hr>
+        <hr class="nhsuk-section-break nhsuk-section-break--l nhsuk-section-break--visible app-section-break--width-4">
 
         <h2>Custom prototype settings</h2>
         <p><a href="/data-settings">View or change the prototype settings</a>.</p>  
