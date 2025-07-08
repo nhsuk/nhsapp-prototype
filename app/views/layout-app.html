@@ -20,10 +20,14 @@
 
   {% if containerFullWidth === true %}
     {% set containerClasses = "app-width-container app-width-container--full" %}
-    {% set mainClasses = "app-main-wrapper app-main-wrapper--no-bottom-padding" %}
+    {% set mainClasses = "app-main-wrapper app-main-wrapper--bottom-padding" %}
   {% else %}
-    {% set containerClasses = "app-width-container" %}
-    {% set mainClasses = "app-main-wrapper" %}
+    {% if data['nativePrototype'] === "no" %}
+      {% set containerClasses = "app-width-container" %}
+      {% set mainClasses = "app-main-wrapper" %}
+    {% else %}
+      {% set mainClasses = "app-main-wrapper--no-top-padding app-main-wrapper--no-bottom-padding" %}
+    {% endif %}
   {% endif %}
 
 {% endif %}
@@ -66,7 +70,9 @@
   {% if data['web'] === "yes" %}
     {% include "components/global-navigation-web/include-updated.html" %}
   {% else %}
-    {% include "components/global-navigation-native/include.html" %}
+    {% if data['nativePrototype'] === "no" %}
+      {% include "components/global-navigation-native/include.html" %}
+    {% endif %}
   {% endif %}
 
 {% endblock %}
@@ -101,7 +107,9 @@
   {% if data['web'] === "yes" %}
     {% include "components/footer-web/include.html" %}
   {% else %}
-    {% include "components/app-bottom-navigation/include.html" %}
+    {% if data['nativePrototype'] === "no" %}
+      {% include "components/app-bottom-navigation/include.html" %}
+    {% endif %}
   {% endif %}
 
 {% endblock %}
