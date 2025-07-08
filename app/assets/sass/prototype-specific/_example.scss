@@ -66,3 +66,11 @@
   margin-bottom: nhsuk-spacing(4);
   max-width: 100%;
 }
+
+code:not([class*=language-]) {
+  padding: 0 4px;
+  color: #c62950;
+  background-color: white;
+  font-family: monospace, monospace;
+  font-size: 1em;
+}

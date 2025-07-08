@@ -51,10 +51,8 @@
 // Add your custom CSS/Sass styles below...
 ///////////////////////////////////////////
 
-.nhs-app-native {
-  .nhsuk-back-link {
-    @include nhsuk-responsive-margin(5, "bottom"); //Hotfix to fix the breacrumb spacing
-  }
+.nhsuk-back-link {
+  @include nhsuk-responsive-margin(5, "bottom"); //Hotfix to fix the breacrumb spacing
 }
 
 // Native container width

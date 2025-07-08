@@ -1,7 +1,7 @@
 {% extends 'layout.html' %}
 
-{% set pageHeading = "Pages" %}
-{% set pageDescription = "Pages and layouts in the NHS App prototype." %}
+{% set pageHeading = "Page templates and layouts" %}
+{% set pageDescription = "A collection of pages, layouts, and design patterns to help you build and test NHS App prototypes quickly and consistently." %}
 
 {% set mainClasses = "nhsuk-main-wrapper--s" %}
 
@@ -23,7 +23,9 @@
         {{ pageDescription }}
       </p>
 
-      <h2 class="nhsuk-heading-m">Layouts</h2>
+      <h2>Layouts</h2>
+
+      <p>Found in <code>/app/views</code></p>
 
       <ul clas="nhsuk-list">
         <li>
@@ -40,9 +42,28 @@
         </li>
       </ul>
 
-      <hr>
+      <hr class="nhsuk-section-break nhsuk-section-break--l nhsuk-section-break--visible app-section-break--width-4">
 
-      <h2 class="nhsuk-heading-m">Login</h2>
+      <h2>Notification pages</h2>
+
+      <p>Found in <code>/app/views/pages</code></p>
+
+      <ul clas="nhsuk-list">
+        <li>
+          <a href="/pages/ios-notification-message">iOS notification message</a>
+        </li>
+        <li>
+          <a href="/pages/ios-notification-message-with-status-bar">iOS notification message (with status bar)</a>
+        </li>
+      </ul>
+
+      <hr class="nhsuk-section-break nhsuk-section-break--l nhsuk-section-break--visible app-section-break--width-4">
+
+      <h2>NHS App pages</h2>
+
+      <p>Found in <code>/app/views/pages</code></p>
+
+      <h3>Login</h3>
 
       <ul clas="nhsuk-list">
         <li>
@@ -59,22 +80,7 @@
         </li>
       </ul>
 
-      <hr>
-
-      <h2 class="nhsuk-heading-m">Notification</h2>
-
-      <ul clas="nhsuk-list">
-        <li>
-          <a href="/pages/ios-notification-message">iOS notification message</a>
-        </li>
-        <li>
-          <a href="/pages/ios-notification-message-with-status-bar">iOS notification message (with status bar)</a>
-        </li>
-      </ul>
-
-      <hr>
-
-      <h2 class="nhsuk-heading-m">Homepage {% if data['web'] === "yes" %}(Web){% else %}(Native){% endif %}</h2>
+      <h3>Homepage {% if data['web'] === "yes" %}(Web){% else %}(Native){% endif %}</h3>
 
       <ul clas="nhsuk-list">
         <li>
@@ -88,9 +94,7 @@
         </li>
       </ul>
 
-      <hr>
-
-      <h2 class="nhsuk-heading-m">Hubpages {% if data['web'] === "yes" %}(Web){% else %}(Native){% endif %}</h2>
+      <h3>Hubpages {% if data['web'] === "yes" %}(Web){% else %}(Native){% endif %}</h3>
 
         <ul clas="nhsuk-list">
           <li>
@@ -130,106 +134,10 @@
             <a href="/pages/account-and-settings-linked-profiles">Account and settings - Linked profiles</a>
           </li>
         </ul>
-
-        <hr>
-
-        <h2 class="nhsuk-heading-m">Your health {% if data['web'] === "yes" %}(Web){% else %}(Native){% endif %}</h2>
-
-        <ul clas="nhsuk-list">
-          <li>
-            <a href="/pages/your-health/upcoming-and-past-appointments-p9">Upcoming and past appointments - P9</a>
-          </li>
-          <ul clas="nhsuk-list">
-            <li>
-              <a href="/pages/your-health/referrals">Referrals</a>
-            </li>
-            <li>
-              <a href="/pages/your-health/hospital-appointments">Hospital appointments</a>
-            </li>
-            <li>
-              <a href="/pages/your-health/treatment-waiting-lists">Treatment waiting lists</a>
-            </li>
-          </ul>
-          <li>
-            <a href="/pages/your-health/upcoming-and-past-appointments-linked-profiles">Upcoming and past appointments - Linked profiles</a>
-          </li>
-          <li>
-            <a href="/pages/your-health/care-plans-p9">Care plans - P9</a>
-          </li>
-          <li>
-            <a href="/pages/your-health/your-health-choices-p9">Your health choices - P9</a>
-          </li>
-          <li>
-            <a href="/pages/your-health/prescriptions-p9">Prescriptions - P9</a>
-          </li>
-          <ul clas="nhsuk-list">
-            <li>
-              <a href="/pages/your-health/requested-medicines">Requested medicines</a>
-            </li>
-            <li>
-              <a href="/pages/your-health/your-approved-prescriptions">Your approved prescriptions</a>
-            </li>
-            <li>
-              <a href="/pages/your-health/past-prescriptions">Past prescriptions</a>
-            </li>
-            <li>
-              <a href="/pages/your-health/your-prescription">Your prescription</a>
-            </li>
-          </ul>
-          <li>
-            <a href="/pages/your-health/prescriptions-linked-profiles">Prescriptions - Linked profiles</a>
-          </li>
-        </ul>
-
-        <hr>
-
-        <h2 class="nhsuk-heading-m">Services {% if data['web'] === "yes" %}(Web){% else %}(Native){% endif %}</h2>
-
-        <h3 class="nhsuk-heading-s">Book a GP appointment</h3>
-
-        <h4 class="nhsuk-heading-xs">Latest journey</h4>
-
-        <ul clas="nhsuk-list">
-          <li>
-            <a href="/pages/services/gp-appointment-type">Appointment type</a>
-          </li>
-          <li>
-            <a href="/pages/services/gp-appointment-location">Select location</a>
-          </li>
-          <li>
-            <a href="/pages/services/gp-appointment-clinician">Select clinician</a>
-          </li>
-          <li>
-            <a href="/pages/services/gp-appointment-select-appointment-v4">Select appointment</a>
-          </li>
-          <li>
-            <a href="/pages/services/gp-appointment-reason">Appointment reason</a>
-          </li>
-          <li>
-            <a href="/pages/services/gp-appointment-confirm">Confirm appointment details</a>
-          </li>
-          <li>
-            <a href="/pages/services/gp-appointment-confirmed">Appointment confirmed</a>
-          </li>
-        </ul>
-
-        <h4 class="nhsuk-heading-xs">Archived pages with date picker</h4>
-
-        <ul clas="nhsuk-list">
-          <li>
-            <a href="/pages/services/gp-appointment-next-available">Next available appointment</a>
-          </li>
-          <li>
-            <a href="/pages/services/gp-appointment-select-date">Select date</a>
-          </li>
-          <li>
-            <a href="/pages/services/gp-appointment-select">Select appointment date and time</a>
-          </li>
-        </ul>
-
-        <hr>
         
-        <h2 class="nhsuk-heading-m">Messages {% if data['web'] === "yes" %}(Web){% else %}(Native){% endif %}</h2>
+        <h3>Messages {% if data['web'] === "yes" %}(Web){% else %}(Native){% endif %}</h3>
+
+        <p>Found in <code>/app/views/pages/messages</code></p>
 
         <ul clas="nhsuk-list">
           <li>
@@ -243,9 +151,9 @@
           </li>
         </ul>
 
-        <hr>
+        <h3>Account and settings {% if data['web'] === "yes" %}(Web){% else %}(Native){% endif %}</h3>
 
-        <h2 class="nhsuk-heading-m">Account and settings {% if data['web'] === "yes" %}(Web){% else %}(Native){% endif %}</h2>
+        <p>Found in <code>/app/views/pages/account-and-settings</code></p>
 
         <ul clas="nhsuk-list">
           <li>
@@ -259,27 +167,37 @@
           </li>
         </ul> 
         
-        <hr>
+        <hr class="nhsuk-section-break nhsuk-section-break--l nhsuk-section-break--visible app-section-break--width-4">
 
-        <h2 class="nhsuk-heading-m">Error pages {% if data['web'] === "yes" %}(Web){% else %}(Native){% endif %} - work in progress</h2>
+        <h2>Page templates</h2>
+
+        <p>Found in <code>/pages/page-templates</code></p>
 
         <ul clas="nhsuk-list">
-          <li><a href="/pages/error-pages/access-repeat-prescriptions">Access repeat prescriptions</a></li>
-          <li><a href="/pages/error-pages/connect-to-gp">Connect to GP</a></li>
-          <li><a href="/pages/error-pages/connect-you-to-the-app">Connect you to the app</a></li>
-          <li><a href="/pages/error-pages/log-in">Log you in</a></li>
-          <li><a href="/pages/error-pages/log-in-age">Log you in because of age</a></li>
-          <li><a href="/pages/error-pages/manage-services-for-others">Manage services for others</a></li>
-          <li><a href="/pages/error-pages/no-appointments-at-this-time">No appointments available online</a></li>
-          <li><a href="/pages/error-pages/face-id">Touch ID or Face ID</a></li>
-          <li><a href="/pages/error-pages/update-app">Update the NHS App</a></li>
-          <li><a href="/pages/error-pages/view-confirmed-prescriptions">View confirmed prescriptions</a></li>
-        </ul> 
-        
-        <hr>
+          <li>
+            <a href="/pages/page-templates/start-page">Start page</a>
+          </li>
+          <li>
+            <a href="/pages/page-templates/question-page-radios">Question page - Radios</a>
+          </li>
+          <li>
+            <a href="/pages/page-templates/question-page-textarea">Question page - Textarea</a>
+          </li>
+          <li>
+            <a href="/pages/page-templates/check-answers">Check answers page</a>
+          </li>
+          <li>
+            <a href="/pages/page-templates/confirmation-page">Confirmation page</a>
+          </li>
+          <li>
+            <a href="/pages/page-templates/error-page">Error page</a>
+          </li>
+        </ul>
 
-        <h2>Prototype data</h2>
-        <p>You can <a href="/data-settings">use default data to create dynamic content</a>.</p>  
+        <hr class="nhsuk-section-break nhsuk-section-break--l nhsuk-section-break--visible app-section-break--width-4">
+
+        <h2>Custom prototype settings</h2>
+        <p><a href="/data-settings">View or change the prototype settings</a>.</p>  
 
     </div>
   </div>
