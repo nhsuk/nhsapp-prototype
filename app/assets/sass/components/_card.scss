@@ -58,10 +58,24 @@
   }
 
   .nhsapp-card__link {
-    color: currentColor;
+    color: $color_nhsuk-white;
+
+    &:hover,
+    &:visited,
+    &:hover:visited {
+      color: $color_nhsuk-white;
+    }
+
+    &:focus,
+    &:focus:hover {
+      color: black;
+    }
   }
 
-  &:hover {
+  &:hover,
+  &:hover:visited {
+    color: $color_nhsuk-white;
+
     .nhsapp-icon {
       fill: $color_nhsuk-white;
     }
@@ -101,7 +115,7 @@
   border: 0;
   color: $color_nhsuk-white;
 
-  a {
+  a:not(.nhsuk-button) {
     color: currentColor;
   }
 

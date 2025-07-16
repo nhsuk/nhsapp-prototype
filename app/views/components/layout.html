@@ -7,8 +7,14 @@
   {{ pageHeading}} Component
 {% endblock %}
 
+{% set mainClasses = "nhsuk-main-wrapper--s" %}
+
 {% block beforeContent %}
-  {% include "components/back-link/include.html" %}
+  {{ backLink({
+    "text": "Back",
+    "classes": "nhsuk-u-margin-bottom-0",
+    href: "/components/"
+  }) }}
 {% endblock %}
 
 {% block content %}
