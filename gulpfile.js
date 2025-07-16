@@ -1,4 +1,6 @@
 // Core dependencies
+process.noDeprecation = true;
+
 const gulp = require('gulp');
 
 // External dependencies
@@ -29,9 +31,7 @@ function compileStyles() {
       silenceDeprecations: [
        'legacy-js-api',
        'color-functions',
-       'mixed-decls',
-       'global-builtin',
-       'import'
+       'mixed-decls'
       ],
      }))
     .pipe(gulp.dest('public/css'))

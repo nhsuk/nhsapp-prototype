@@ -211,6 +211,10 @@ app.post(/^\/([^.]+)$/, (req, res) => {
   res.redirect(`/${req.params[0]}`);
 });
 
+app.get('/.well-known/appspecific/com.chrome.devtools.json', (req, res) => {
+  res.status(404).json({ error: 'Not found' });
+});
+
 // Catch 404 and forward to error handler
 app.use((req, res, next) => {
   const err = new Error(`Page not found: ${req.path}`); // eslint-disable-line no-console
